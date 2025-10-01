@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "996ba612-4820-4a43-9d99-6b92d6353596",
+		"name": "Maktabkhuneh API Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48565142",
+		"_collection_link": "https://belahidoost-3536583.postman.co/workspace/Bardia-Elahidoost's-Workspace~9d2ae9d8-7f1c-47f8-8230-e439a764079f/collection/48565142-996ba612-4820-4a43-9d99-6b92d6353596?action=share&source=collection_link&creator=48565142"
+	},
+	"item": [
+		{
+			"name": "1. Get Token Baby",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "bardia",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "2363",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/token/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Get All Courses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MjQzMzA3LCJpYXQiOjE3NTkyNDMwMDcsImp0aSI6IjMwMDVmMzFlMDgyYTQxNjM4MmI3ZTAxNDA1ZjhhMzJiIiwidXNlcl9pZCI6IjEifQ._pyHnlUwuSfdQUv4SlhFDlpnPshZNm3qemzoZ-yZB9w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/all/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Get Single Course",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MjQzNzk4LCJpYXQiOjE3NTkyNDM0OTgsImp0aSI6IjE0NTU2YmE0ZDNhYzQyYzJiNjkwMTQ5M2Q5NTE0ZDczIiwidXNlcl9pZCI6IjEifQ.44iiRfx4hpKBhEudL92gQ1LKRrT_rYixdGx9frIRYbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": ""
+		}
+	]
+}
